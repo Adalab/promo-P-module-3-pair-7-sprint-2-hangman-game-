@@ -6,6 +6,9 @@ import getWordFromApi from '../services/api';
 // styles
 import '../styles/App.scss';
 
+// components
+import Header from './Header';
+
 function App() {
   const [word, setWord] = useState('');
   const [userLetters, setUserLetters] = useState([]);
@@ -90,9 +93,7 @@ function App() {
 
   return (
     <div className="page">
-      <header>
-        <h1 className="header__title">Juego del ahorcado</h1>
-      </header>
+      <Header title="Juego del ahorcado" />
       <main className="main">
         <section>
           <div className="solution">
