@@ -11,11 +11,14 @@ import Header from './Header';
 import Dummy from './Dummy';
 import SolutionLetters from './SolutionLetters';
 
+// Loader
+import Loading from '../components/Loading';
+
 function App() {
   const [word, setWord] = useState('');
   const [userLetters, setUserLetters] = useState([]);
   const [lastLetter, setLastLetter] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(false);
   const [numberOfErrors, setNumberOfErrors] = useState(0);
   const maxNumberOfErrors = 13;
 
@@ -97,6 +100,7 @@ function App() {
     <div className="page">
       <Header title="Juego del ahorcado" />
       <main className="main">
+        <Loading isEditMode={isLoading} />
         <SolutionLetters
           errorLetters={renderErrorLetters()}
           solutionLetters={renderSolutionLetters()}
