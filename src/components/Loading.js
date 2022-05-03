@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Loading = (props) => {
-  return <div className={props.isEditMode ? 'loader' : ''}></div>;
+  return <div className={props.isEditMode ? 'loading' : ''}></div>;
 };
 
 Loading.PropType = {

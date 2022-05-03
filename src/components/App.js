@@ -23,7 +23,6 @@ function App() {
   const maxNumberOfErrors = 13;
 
   useEffect(() => {
-    setLoading(true);
     getWordFromApi().then((word) => {
       setWord(word);
       setLoading(false);
@@ -36,6 +35,7 @@ function App() {
     setWord(value);
     setUserLetters([]);
     setLastLetter('');
+    setLoading(true);
   };
 
   const handleKeyDown = (ev) => {
